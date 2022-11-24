@@ -52,6 +52,6 @@ button.addEventListener("click", function () {
     result.innerHTML = ('Email Valida ')
   } else {
     result.innerHTML = ('Email non Valida ')
-}
+  }
 })
 
