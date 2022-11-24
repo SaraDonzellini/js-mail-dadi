@@ -32,20 +32,24 @@ const button = document.getElementById('button-addon2')
 
 
 button.addEventListener("click", function () {
+  let found = false;
+
   for (let i = 0; i < emailArray.length; i++) {
+    console.log(emailArray[i])
     const emailElement = document.getElementById('email')
-    console.log(emailElement.value)
     const result = document.getElementById('result')
 
-    if (emailArray.includes(emailElement.value)) {
-      console.log("email valida")
-      result.append("E-mail Valida ")
-
+    if (emailArray[i] == emailElement.value) {
+      found = true
     } else {
-      console.log("email non valida")
-      result.append("E-mail non Valida ")
+      found = false
+    }
+
+    if (found == true) {
+      result.append('Email Valida ')
+    } else {
+      result.append('Email non Valida ')
     }
   }
-
 })
 
